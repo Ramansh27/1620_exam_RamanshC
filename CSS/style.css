@@ -5,16 +5,48 @@
 }
 
 body{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: minmax(0px, auto);
+    grid-template-rows: 5rem 1fr 5rem;
     background-color: #B7E3CC;
     color: #354f52;
     width: 100vw;
-    height: 100vh;
+    overflow-y: auto;
+    justify-content: center;
 }
-h1{
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.band-name{
+    display:flex;
     font-family: 'Indie Flower', cursive;
     background-color: #7d82b8;
     color: #faf9f9;
     justify-content: center;
+    width: 100%
+}
+
+nav{
+    grid-area: h;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+@media screen and (min-width: 640px){
+    body{
+        display: grid;
+        grid-template-columns: ;
+
+    }
+
 }
