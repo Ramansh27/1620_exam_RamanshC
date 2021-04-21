@@ -30,6 +30,14 @@ main{
     width: 100%
 }
 
+h2{
+    font-size: 1rem;
+}
+
+h3{
+    font-size: 1rem;
+}
+
 nav{
     grid-area: h;
     display: flex;
@@ -41,12 +49,43 @@ li{
     list-style-type: none;
 }
 
+.shop-item > span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.cart-row>span{
+    padding: 15px;
+}
 
 @media screen and (min-width: 640px){
     body{
         display: grid;
-        grid-template-columns: ;
-
+        grid-template-rows: 5rem 8rem 1fr 5rem;
+        grid-template-areas: 
+            'n'
+            'm'
+            'c'
+            'f';
+        width: 100vw;
+        height: 100vh;
     }
+
+    .nav{
+        grid-area: n;
+    }
+
+    .main{
+        grid-area: m;
+    }
+    .cart{
+        grid-area: c
+    }
+    footer{
+        grid-area: f
+    }
+
 
 }
